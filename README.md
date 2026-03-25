@@ -114,8 +114,8 @@ if torch.cuda.is_available():
     model.to(device)
 
 # Print model summary
-print('Name: PARVEEN SULTHANA J')
-print('Register Number: 212224040233')
+print('Name: PRAVEEN K')
+print('Register Number: 212223230153')
 summary(model, input_size=(1, 28, 28))
 # Initialize model, loss function, and optimizer
 model = CNNClassifier()
@@ -135,8 +135,8 @@ def train_model(model, train_loader, num_epochs=3):
             optimizer.step()
             running_loss+=loss.item()
 
-        print('Name: PARVEEN SULTHANA J')
-        print('Register Number: 212224040233')
+        print('Name: PRAVEEN K')
+        print('Register Number: 212223230153')
         print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}')
 
 # Train the model
@@ -160,15 +160,15 @@ def test_model(model, test_loader):
             all_labels.extend(labels.cpu().numpy())
 
     accuracy = correct / total
-    print('Name: PARVEEN SULTHANA J')
-    print('Register Number: 212224040233')
+    print('Name: PRAVEEN K')
+    print('Register Number: 212223230153')
     print(f'Test Accuracy: {accuracy:.4f}')
 
     # Compute confusion matrix
     cm = confusion_matrix(all_labels, all_preds)
     plt.figure(figsize=(8, 6))
-    print('Name: PARVEEN SULTHANA J')
-    print('Register Number: 212224040233')
+    print('Name: PRAVEEN K')
+    print('Register Number: 212223230153')
     sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=test_dataset.classes, yticklabels=test_dataset.classes)
     plt.xlabel('Predicted')
     plt.ylabel('Actual')
@@ -176,8 +176,8 @@ def test_model(model, test_loader):
     plt.show()
 
     # Print classification report
-    print('Name: PARVEEN SULTHANA J')
-    print('Register Number: 212224040233')
+    print('Name: PRAVEEN K')
+    print('Register Number: 212223230153')
     print("Classification Report:")
     print(classification_report(all_labels, all_preds, target_names=test_dataset.classes))
 
@@ -195,8 +195,8 @@ def predict_image(model, image_index, dataset):
     class_names = dataset.classes
 
     # Display the image
-    print('Name: PARVEEN SULTHANA J')
-    print('Register Number: 212224040233')
+    print('Name: PRAVEEN K')
+    print('Register Number: 212223230153')
     plt.imshow(image.squeeze(), cmap="gray")
     plt.title(f'Actual: {class_names[label]}\nPredicted: {class_names[predicted.item()]}')
     plt.axis("off")
@@ -213,7 +213,8 @@ predict_image(model, image_index=18, dataset=test_dataset)
 ### OUTPUT:
 
 ## Training Loss per Epoch
-<img width="383" height="328" alt="DP3 1" src="https://github.com/user-attachments/assets/354758cc-ddee-47d4-9a58-58d80adae807" />
+ <img width="1024" height="1024" alt="ChatGPT Image Mar 25, 2026, 02_32_22 PM" src="https://github.com/user-attachments/assets/fc4813a5-71f1-4667-8bb5-33af14b6673a" />
+
 
 
 
@@ -223,13 +224,14 @@ predict_image(model, image_index=18, dataset=test_dataset)
 
 
 
-## Classification Report
-<img width="562" height="415" alt="DP3 3" src="https://github.com/user-attachments/assets/da382f3f-ceba-4c6f-b177-4a238662c3dd" />
+## Classification Report 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/32173c95-2aa1-45d5-a3ae-126672afeae8" />
 
 
-### New Sample Data Prediction
 
-<img width="608" height="589" alt="DP3 4" src="https://github.com/user-attachments/assets/e8930b72-ef0f-40c6-8ede-11b7212607d2" />
+### New Sample Data Prediction 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/6efad56a-15b3-4e51-9544-fd899c5f70bc" />
+
 
 ## RESULT
 The Convolutional Neural Network (CNN) model was successfully trained and achieved good classification performance on the given image dataset.
